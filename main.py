@@ -97,7 +97,7 @@ class RichHideMyEmail(HideMyEmail):
             if s == "1":
                 return await self.generate()
             elif s == "2":
-                return await self.list(True, )
+                return await self.list(True)
             else:
                 raise ValueError
         except (KeyboardInterrupt, ValueError):
