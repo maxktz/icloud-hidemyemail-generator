@@ -159,7 +159,7 @@ class RichHideMyEmail(HideMyEmail):
                         status,
                     )
         self.console.print(self.table)
-        with open("emails.txt", "w") as f:
+        with open("emails.txt", "w", encoding="utf-8") as f:
             f.write(os.linesep.join(email_strings))
         self.console.log('[bold green]Written to emails.txt in format [cyan]label;email;time;status')
 
