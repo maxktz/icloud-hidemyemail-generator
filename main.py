@@ -14,7 +14,7 @@ from icloud import HideMyEmail
 
 MAX_CONCURRENT_TASKS = 5
 SLEEP_INTERVAL = 30*60
-COUNT_TO_GENERATE = 20
+COUNT_TO_GENERATE = 30
 
 
 class RichHideMyEmail(HideMyEmail):
@@ -114,7 +114,7 @@ class RichHideMyEmail(HideMyEmail):
                         batch = await self._generate(MAX_CONCURRENT_TASKS)
                         emails += batch
                         count -= MAX_CONCURRENT_TASKS
-                    self.console.log(f"[cyan]Generated {len(emails)}, sleeping {round(SLEEP_INTERVAL/60)} minute(s)")
+                    self.console.log(f"[cyan]Generated {len(emails)} emails, sleeping {round(SLEEP_INTERVAL/60)} minute(s)")
                     await asyncio.sleep(SLEEP_INTERVAL)
         except KeyboardInterrupt:
             return []
