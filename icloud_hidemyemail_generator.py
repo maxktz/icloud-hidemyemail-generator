@@ -148,7 +148,7 @@ class RichHideMyEmail(HideMyEmail):
             status = "Active" if email["isActive"] else "Inactive"
             creation_time = datetime.datetime.fromtimestamp(
                 email["createTimestamp"] / 1000
-            ).strftime("%Y-%m-%d %H:%M")
+            ).strftime("%y-%m-%d %h:%M")
             email_strings.append(f"{email['label']};{email['hme']};{creation_time};{status}")
             if email["isActive"] == active:
                 if search is None or re.search(search, email["label"]):

@@ -1,8 +1,8 @@
 import asyncio
 import click
 
-from main import generate
-from main import list
+from icloud_hidemyemail_generator import generate
+from icloud_hidemyemail_generator import list
 
 
 @click.group()

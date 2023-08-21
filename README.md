@@ -37,13 +37,13 @@ pip install -r requirements.txt
 **on Mac:**
 
 ```bash
-python3 main.py
+python3 icloud_hidemyemail_generator.py
 ```
 
 **on Windows:**
 
 ```bash
-python main.py
+python icloud_hidemyemail_generator.py
 ```
 
 ## Getting iCloud cookie string
