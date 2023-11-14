@@ -1,70 +1,64 @@
 <p align="center"><img width=60% src="docs/header.png"></p>
 
-> Automated generation of Apple's iCloud emails via HideMyEmail.
+> Автоматизированная генераци iCloud почт, с помощью HideMyEmail.
 
-_You do need to have an active iCloud+ subscription to be able to generate iCloud emails..._
+_Вам нужно иметь активную подписку iCloud+, чтобы иметь возможность генерировать почты iCloud..._
 
 <p align="center"><img src="docs/example.png"></p>
 
-## Usage
+## Использование
 
-Apple allows you to create about 5-10 iCloud emails every ~30 mins. However, in my experience, the max one-time number of iCloud emails is limited to 750, to create more you will required to remove the previous ones.
+Apple позволяет создавать около 5-10 hidemyemail почт, каждые 30 мин. Однако, по моему опыту, макс. единовременное количество почт iCloud ограничено 750, чтобы создавать еще, потребуют удалить предыдущие.
 
-## Setup
-> Python 3.9+ is required!
+## Установка
+> Требуется Python 3.9+!
 
-1. Clone this repository
+1. Клонируйте этот репозиторий командой ниже, либо скачайте архив
 
 ```bash
 git clone https://github.com/rtunazzz/hidemyemail-generator
 ```
 
-2. Install requirements
+2. Установите требуемые пакеты
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. [Save your cookie string](https://github.com/rtunazzz/hidemyemail-generator#getting-icloud-cookie-string)
+3. [Сохраните свои ICloud cookies в файл](https://github.com/rtunazzz/hidemyemail-generator#Получение-своих-ICloud-cookies)
 
-   > You only need to do this once 🙂
+   > Вам просто нужно сделать только это 🙂
 
-4. You can now run the gen with:
+4. Потом можете запустить скрипт:
 
 
-**on Mac:**
-
-```bash
-python3 main.py
-```
-
-**on Windows:**
+**на Mac/Windows:**
 
 ```bash
 python main.py
 ```
 
-## Getting iCloud cookie string
+## Получение своих ICloud cookies
 
-> There is more than one way how you can get the required cookie string but this one is _imo_ the simplest...
+> Есть много способов, как получить строку своих cookie сайта, но по моему мнению, это простейший...
 
-1. Download [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg) Chrome extension
+1. Скачай Chrome расширение [EditThisCookie](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg)
 
-2. Go to [EditThisCookie settings page](chrome-extension://fngmhnnpilhplaeedifhccceomclgfbg/options_pages/user_preferences.html) and set the preferred export format to `Semicolon separated name=value pairs`
+2. Зайди на страницу [настроек EditThisCookie](chrome-extension://fngmhnnpilhplaeedifhccceomclgfbg/options_pages/user_preferences.html) и поменяй "`preferred export format`" на "`Semicolon separated name=value pairs`"
 
 <p align="center"><img src="docs/cookie-settings.png" width=70%></p>
 
-3. Navigate to [iCloud settings](https://www.icloud.com/settings/) in your browser and log in
+3. Перейди на страницу [настроек iCloud](https://www.icloud.com/settings/) и выполни вход
 
-4. Click on the EditThisCookie extension and export cookies
+4. Нажми на расширение EditThisCookie и экспортируй cookie
 
 <p align="center"><img src="docs/export-cookies.png" width=70%></p>
 
-5. Paste the exported cookies into a file named `cookie.txt`
+5. Вставь экспортированные cookie в файл под названием `cookie.txt`
 
-# License
+# Лицензия
 
-Licensed under the MIT License - see the [LICENSE file](./LICENSE) for more details.
+ПО лицензируется по лицензии MIT License - подробности см. в файле [LICENSE](./LICENSE).
 
 
-I didn't write this script, **[rtuna](https://twitter.com/rtunazzz)** made it, thx to him, but I just lil bit modified it and translated readme.
+P.S. Я не писал этот скрипт, его сделал **[rtuna](https://twitter.com/rtunazzz)**, за что я благодарен, я лишь немного изменил его и перевел на русский.
