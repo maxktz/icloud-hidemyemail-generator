@@ -37,10 +37,9 @@ def listcommand(active, search):
 cli.add_command(listcommand, name="list")
 cli.add_command(generatecommand, name="generate")
 
-if __name__ == "__main__":
-    cli()
 
 if __name__ == "__main__":
+    cli()
     loop = asyncio.new_event_loop()
     try:
         loop.run_until_complete(generate())

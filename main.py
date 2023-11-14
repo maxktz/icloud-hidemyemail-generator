@@ -1,13 +1,12 @@
 import asyncio
 import datetime
 import os
-from typing import Union, List
 import re
 
-from rich.text import Text
 from rich.prompt import Prompt
 from rich.console import Console
 from rich.table import Table
+from typing import Union, List
 
 from icloud import HideMyEmail
 
@@ -87,8 +86,8 @@ class RichHideMyEmail(HideMyEmail):
         try:
             self.console.rule()
             s = Prompt.ask(
-                "1. Generate emails\n"
-                "2. Get emails list\n"
+                "[bold cyan]1.[/bold cyan] Generate emails\n"
+                "[bold cyan]2.[/bold cyan] Get emails list\n"
                 "\n"
                 "[bold green]Select your action [cyan](Ctrl+C to exit)[reset]",
                 console=self.console
@@ -178,9 +177,10 @@ async def ask_action() -> None:
     async with RichHideMyEmail() as hme:
         await hme.ask_action()
 
+
 if __name__ == "__main__":
-    loop = asyncio.new_event_loop()
     try:
+        loop = asyncio.new_event_loop()
         loop.run_until_complete(ask_action())
     except KeyboardInterrupt:
         pass
