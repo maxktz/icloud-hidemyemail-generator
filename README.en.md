@@ -67,4 +67,4 @@ python main.py
 Licensed under the MIT License - see the [LICENSE file](./LICENSE) for more details.
 
 
-P.S. I didn't write this script, **[rtuna](https://twitter.com/rtunazzz)** made it, thx to him, but I just lil bit modified it and translated readme.
+P.S. I didn't write this script completely, **[rtuna](https://twitter.com/rtunazzz)** made it, thx to him, but I just lil bit fidex, modified it and translated README.
