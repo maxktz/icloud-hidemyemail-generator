@@ -105,4 +105,3 @@ class HideMyEmail:
             return {"error": 1, "reason": "Request timed out"}
         except Exception as e:
             return {"error": 1, "reason": str(e)}
-
