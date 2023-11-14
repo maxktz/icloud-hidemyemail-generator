@@ -5,7 +5,7 @@ import re
 
 from rich.prompt import Prompt
 from rich.console import Console
-from rich.table import Table
+from rich.table import Table, box, Column
 from typing import Union, List
 
 from icloud import HideMyEmail
@@ -22,7 +22,14 @@ class RichHideMyEmail(HideMyEmail):
     def __init__(self):
         super().__init__()
         self.console = Console()
-        self.table = Table()
+        self.table = Table(
+            Column("Label", style="bold white"),
+            Column("Email", style="bold cyan"),
+            Column("Creation Time", style="bold white"),
+            Column("Status", style="bold cyan"),
+            style="bold green", 
+            box=box.MINIMAL,
+        )
 
         if os.path.exists(self._cookie_file):
             # load in a cookie string from file
@@ -137,17 +144,12 @@ class RichHideMyEmail(HideMyEmail):
             )
             return
 
-        self.table.add_column("Label")
-        self.table.add_column("Hide my email")
-        self.table.add_column("Creation Time")
-        self.table.add_column("Status")
-
         email_strings = []
         for email in gen_res["result"]["hmeEmails"]:
             status = "Active" if email["isActive"] else "Inactive"
             creation_time = datetime.datetime.fromtimestamp(
                 email["createTimestamp"] / 1000
-            ).strftime("%y-%m-%d %h:%M")
+            ).strftime("%y-%m-%d %H:%M")
             email_strings.append(f"{email['label']};{email['hme']};{creation_time};{status}")
             if email["isActive"] == active:
                 if search is None or re.search(search, email["label"]):
