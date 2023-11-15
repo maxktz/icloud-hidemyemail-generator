@@ -25,7 +25,7 @@ git clone https://github.com/rtunazzz/hidemyemail-generator
 pip install -r requirements.txt
 ```
 
-3. [Сохраните свои ICloud cookies в файл](https://github.com/rtunazzz/hidemyemail-generator#Получение-своих-ICloud-cookies)
+3. [Сохраните свои ICloud cookies в файл](https://github.com/zrxmax/icloud-hidemyemail-generator#Получение-своих-ICloud-cookies)
 
    > Вам просто нужно сделать только это 🙂
 
